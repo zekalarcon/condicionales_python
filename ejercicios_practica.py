@@ -61,11 +61,12 @@ def ej1():
     # es mayor a -2
     # Imprima en pantalla si se cumple o no la condición
 
-    if numero_1 < 10 or numero_2 > -2:
-        if numero_1 < 10:
-            print(f'El primer numero ingreado: {numero_1}\nCumple la condicion')
-        elif numero_2 > -2:
-            print(f'El segundo numero ingresado: {numero_2}\nCumple la condicion')    
+    if numero_1 < 10 and numero_2 > -2:
+        print(f'Los dos numero ingreados: {numero_1} y {numero_2}\nCumplen la condicion')
+    elif numero_1 < 10:
+        print(f'El primer numero ingresado: {numero_1}\nCumple la condicion') 
+    elif numero_2 > -2:
+        print(f'El segundo numero ingresado: {numero_2}\nCumple la condicion')       
     else:
         print('Los numeros no cumplen ninguna condicion')
                 
@@ -108,12 +109,12 @@ def ej2():
     # es mayor a la primera letra de la segunda palabra
     # Imprima en pantalla según corresponda
 
-    if texto_1[:1] > texto_2[:1]:
-        print(f'La primer letra "{texto_1[:1]}" es mayor alfabeticamente que la primer letra "{texto_2[:1]}"')
+    if texto_1[0] > texto_2[0]:
+        print(f'La primer letra "{texto_1[0]}" es mayor alfabeticamente que la primer letra "{texto_2[0]}"')
     elif texto_2[:1] > texto_1[:1]:
-        print(f'La primer letra "{texto_2[:1]}" es mayor alfabeticamente que la primer letra "{texto_1[:1]}"')
+        print(f'La primer letra "{texto_2[0]}" es mayor alfabeticamente que la primer letra "{texto_1[0]}"')
     else:
-        print(f'La primer letra "{texto_1[:1]}" y primer letra "{texto_2[:1]}" son iguales alfabeticamente')       
+        print(f'La primer letra "{texto_1[0]}" y primer letra "{texto_2[0]}" son iguales alfabeticamente')       
 
     copia_texto_1 = texto_1  # Copia de la variable texto_1
 
@@ -137,8 +138,8 @@ def ej3():
     # Ejercicios de práctica numérica
 
     # Condicionales anidados
-    numero_1 = 3
-    numero_2 = 5
+    numero_1 = 6
+    numero_2 = 2
 
     # Verifique si el numero_1 es mayor a 5
     #   --> En caso afirmativo, verifique si el numero_2
@@ -155,11 +156,12 @@ def ej3():
             print('Resp = 1')
         else:
             print('Resp = 2')
-    elif numero_1 <= 5:
-        if numero_2 > 5:
-            print('Resp = 3')
-        else:
-            print('Resp = 4')            
+    else:
+        if numero_1 <= 5:
+            if numero_2 > 5:
+                print('Resp = 3')
+            else:
+                print('Resp = 4')            
     
     # Verifique la calificación de un estudiante según su
     # puntaje en un examen
